@@ -49,7 +49,7 @@ $(eval $(call SetupJavaCompiler,BOOT_JAVAC, \
         $(JAVA_TOOL_FLAGS_SMALL) \
         $(BOOT_JDK_SOURCETARGET) \
         -XDignore.symbol.file=true -g \
-        -Xlint:all$(COMMA)-deprecation$(COMMA)-options -Werror, \
+        -Xlint:all$(COMMA)-deprecation$(COMMA)-options, \
     DISABLE_SJAVAC := true, \
 ))
 
@@ -109,7 +109,7 @@ $(eval $(call SetupJavaCompiler,GENERATE_8_BYTECODE, \
         $(JAVA_TOOL_FLAGS_SMALL) \
         --release 8 \
         -XDignore.symbol.file=true -g \
-        -Xlint:all -Werror, \
+        -Xlint:all, \
     DISABLE_SJAVAC := true, \
 ))
 
